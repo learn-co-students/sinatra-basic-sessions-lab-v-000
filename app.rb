@@ -13,12 +13,15 @@ class App < Sinatra::Base
 
   post '/checkout' do
     # session.merge!(params)
-    session[:item] = params.values.first
+    params.each do |k, v|
+      session[k] = v
+    end
     @session = session
     erb :checkout
   end
 end
 
-# the merge method did not work. i had to manually add the key, :item
-# to the session hash and set it equal to a value.  something about this
-# seems incorrect. i will compare with the solution.
+# changed method for setting new values to the session hash
+# using the .each method. It seems more abstract. I noticed there
+# might be a problem if there were more than one item, which means
+# the data structure would have to change to an array of hashes
