@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Checkout</title>
+  </head>
+  <body>
+    <% @session.each do |key, item| %>
+      <p><%= item.to_S %></p>
+    <% end %>
+  </body>
+</html>
