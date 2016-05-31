@@ -8,8 +8,8 @@ class App < Sinatra::Base
   end
 
   post "/checkout" do
-
-
+    @shopping_cart = @@items.to_index.each {|merch| merch}
+  
     erb :checkout
   end
 
