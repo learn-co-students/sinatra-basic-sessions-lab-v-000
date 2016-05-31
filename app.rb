@@ -8,9 +8,9 @@ class App < Sinatra::Base
   end
 
   post "/checkout" do
-    @shopping_cart = @@items.to_index.each {|merch| merch}
-  
+    @shopping_cart = Cart.new(merchandize)
     erb :checkout
+    end
   end
 
 end
