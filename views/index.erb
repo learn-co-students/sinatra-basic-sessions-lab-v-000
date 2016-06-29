@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>shopping</title>
+</head>
+<body>
 
+  <h1>add an item to your cart</h1>
+  <form method="post" action="/checkout">
+    <input type="text" name="item">
+    <input type="submit" id="submit">
+  </form>
+
+   <h1>your current cart has:</h1>
+   <%= @session %>
+
+
+
+</body>
+</html>
