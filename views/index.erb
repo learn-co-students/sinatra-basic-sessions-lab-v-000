@@ -1,1 +1,11 @@
+<form action ="/checkout" method = "POST">
+  Enter the item you would like to purchase: <input id="item" type="text" name="item">
+  <input id = "submit" type="submit" value="submit">
+</form>
 
+<h3>Items Here:</h3>
+<% if @session == nil %>
+  <p>  There are no items.</p>
+<% else %>
+  <%= @session["item"] %>
+<% end %>
