@@ -1,1 +1,9 @@
+<form method="POST" action="/checkout">
+  <p>Select an item to purchase: <input type="text" name="item"></p>
+  <input id="submit" type="submit">
+</form>
+
+<% if @session %>
+  <p><%= @session[:item] %></p>
+<% end %>
 
