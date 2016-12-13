@@ -1,4 +1,22 @@
+require 'pry'
 require_relative 'config/environment'
 
 class App < Sinatra::Base
-end
+
+  configure do 
+    enable :sessions
+    set :session_secret, 'anything_i_want'
+  end
+
+  get '/' do 
+
+    erb :index 
+  end  
+
+  post '/checkout' do 
+    session[:item] = params[:item]
+    @session = session 
+    erb :checkout
+  end  
+
+end  
