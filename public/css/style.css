@@ -1,0 +1,23 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1em
+}
+
+input {
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #1eb273;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #1eb273;
+}
+
+input[type="submit"] {
+  font-size: 1em;
+  border: none;
+  background: #1eb273;
+  color: white;
+}
