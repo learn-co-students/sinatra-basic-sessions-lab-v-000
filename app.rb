@@ -13,9 +13,8 @@ class App < Sinatra::Base
 
 
   post "/checkout" do
-  @session = session
-@new_hash = @session.merge!(params)
-    @item = @new_hash["item"]
+    @session = session
+    @session[:item] = params[:item]
   erb :display
   end
 
