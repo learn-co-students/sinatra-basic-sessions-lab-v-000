@@ -12,9 +12,11 @@ class App < Sinatra::Base
 	end
 
 	get '/confirmation' do 
+		redirect to :'/' unless session[:item]
+
 		@item = session[:item]
 		session[:item] = nil
-		
+
 		erb :confirmation
 	end
 
