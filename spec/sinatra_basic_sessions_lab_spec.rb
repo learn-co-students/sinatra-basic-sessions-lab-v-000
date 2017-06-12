@@ -28,7 +28,7 @@ describe App do
       params = {
         :item => "socks"
       }
-      # binding.pry
+      post '/checkout', params
       expect(session.has_key?(:item)).to eq(true)
       expect(session[:item]).to eq(params[:item])
     end
