@@ -4,7 +4,7 @@ class App < Sinatra::Base
 
     configure do
         enable :sessions
-        set :session_secret, "secrets"
+        set :session_secret, "secrets_of_Flatiron"
     end
 
     get "/" do
