@@ -11,8 +11,9 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-   session["item"] = params[:item]
-   @session = session
-   "#{@session['item']}"
+  #binding.pry
+   session["item"] = params[:item]#sets to params
+   @session = session #set to instance variable
+   "#{@session['item']}" #post interpolated result to view
   end
 end
