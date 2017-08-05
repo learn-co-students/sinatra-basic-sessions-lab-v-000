@@ -1,1 +1,18 @@
+<!-- index.erb should contain a form with text field. Here, 
+the user will enter an item to purchase. The form should 
+post to the action /checkout.
+ -->
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+    <form method="POST" action="/checkout">
+      <p>Enter your item to purchase:<input type="text" name="item"></p>
+      <input type="submit" id="submit">
+    </form>
+  </body>
+</html>

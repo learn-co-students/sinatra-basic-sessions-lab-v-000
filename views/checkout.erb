@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+    <% @session[:item] = params["item"] %>
+    <% binding.pry %>
+    <%= @session["item"] %>
+  </body>
+</html>
