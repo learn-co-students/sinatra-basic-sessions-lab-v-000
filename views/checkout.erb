@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h3>Item</h3>
+  <h3><%= session[:item] %></h3>
+  <h3><%= session.each {|x,y| puts "#{x} #{y}"} %></h3> 
+</body>
+</html>
