@@ -7,11 +7,16 @@ class App < Sinatra::Base
   end
 
   get '/' do
+    # doesn't set @session
+    # @session = session
+
     erb :index
   end
 
   post '/checkout' do
+    # adding to the actual session the 'item'
     session[:item] = params[:item]
+    # update session instance
     @session = session
 
     erb :checkout
