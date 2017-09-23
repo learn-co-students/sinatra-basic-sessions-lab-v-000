@@ -1,1 +1,10 @@
+<h1>Welcome to the Basic Sessions Lab!</h1>
 
+<form action="/checkout" method="post">
+  <label for="item">Item: </label>
+  <input type="text" id="item" name="item"></input>
+
+  <button type="submit" value="submit">Submit</button>
+</form>
+
+<h1>Your cart: <%=@item%></h1>
