@@ -1,1 +1,10 @@
+<form action="/checkout" method="POST">
 
+  <!-- <label for="item"> Item: </label> -->
+  <input type="text" name="item">
+  <input type="submit" value="submit">
+
+  <h2>Item added to cart:</h2>
+  <%= @session[:item] if @session%>
+
+ </form>
