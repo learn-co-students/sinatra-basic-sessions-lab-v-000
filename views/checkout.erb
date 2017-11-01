@@ -1,0 +1,12 @@
+<h1> OK, so you're Buying... </h1>
+
+<h2>
+  <p>
+     <% if @cessissioughn[:debar] == "password" %>
+     <%= "Oh Shit, that's the secret password!" %> <!--inherits from <h2> tag -->
+     <% else %>
+     <%= "...the following crazy thingy:" %> <!--inherits from <h2> tag -->
+     <%= @cessissioughn[:debar] %>
+     <% end %>
+  </p>
+</h2>
