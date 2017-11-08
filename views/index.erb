@@ -1,1 +1,9 @@
 
+<form action="/checkout" method="post">
+  <label for="item">Item: </label>
+  <input type="text" name="item">
+  <input type="submit" name="submit" value="submit">
+  
+  <% session[:item] = params[:item] %>
+  <% @session = session %>
+</form>
