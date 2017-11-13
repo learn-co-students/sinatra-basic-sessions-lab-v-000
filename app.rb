@@ -8,15 +8,14 @@ class App < Sinatra::Base
   # end
 
   get '/' do
-    session["item"] = "Victoria"
+    session["item"] ||= nil
     # @session = session
 
     erb :index
   end
 
   post '/checkout' do
-    @item = params["item"]
-    store_name(@item)
+    session["item"] = params["item"]
 
     erb :checkout
   end
