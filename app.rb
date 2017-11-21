@@ -13,8 +13,9 @@ class App < Sinatra::Base
   end
 
   post '/checkout' do
-  @item = Item.new(params[:item])
-  end
-#is it just one item? 
+    @item = Item.new(params[:item])
 
+  #is it just one item?
+    erb :show
+  end
 end
