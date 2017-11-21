@@ -12,7 +12,9 @@ class App < Sinatra::Base
     erb :index
   end
 
-  
-
+  post '/checkout' do
+  @item = Item.new(params[:item])
+  end
+#is it just one item? 
 
 end
