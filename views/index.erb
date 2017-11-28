@@ -1,1 +1,9 @@
+<form method="post" action="/checkout">
+  
+  <p>Item: <input type="text" name="item">
+  <input type="submit" id="submit">
+
+</form>
+
+<h1>Current Item: <%= @session.item if @session %></h1>
 
