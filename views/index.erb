@@ -1,1 +1,15 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Item To Purchase</title>
+</head>
+<body>
+  <h1>Enter An Item To Purchase</h1>
+  <form method="POST" action="/checkout">
+    <p><label>Item: </label><input type="text" name="item"></p>
+    <p><input id="submit" type="submit"></p>
+  </form>
+  <p><%= @session %></p>
+</body>
+</html>
