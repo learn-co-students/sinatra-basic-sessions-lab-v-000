@@ -13,5 +13,6 @@ class App < Sinatra::Base
   #  binding.pry
     session["item"] = params[:item]
     @session = session
+    erb :checkout  #the checkout.erb in the views directory does not exist currently in this lab
   end
 end
