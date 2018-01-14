@@ -1,3 +1,5 @@
 <h2> You're Buying </h2>
 
-<p><% @session[item]="socks" %></p>
+<p><%= @session.each do |item|
+        item %>
+    <%end%></p>
