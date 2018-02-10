@@ -1,8 +1,7 @@
+puts "ENTERED spec_helper.rb"
+
 ENV["SINATRA_ENV"] = "test"
 require_relative '../config/environment.rb'
-require 'rack/test'
-require 'capybara'
-require 'capybara/dsl'
 require 'capybara/rspec'
 
 
