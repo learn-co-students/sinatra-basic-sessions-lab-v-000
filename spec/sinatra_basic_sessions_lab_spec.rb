@@ -1,3 +1,5 @@
+puts "SPEC/SINATRA_BASIC_SESSIONS_LAB_SPEC.RB entered"
+
 describe App do
 
   describe 'GET /' do

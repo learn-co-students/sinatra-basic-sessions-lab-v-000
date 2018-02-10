@@ -1,4 +1,21 @@
-require_relative 'config/environment'
+puts "APP.RB entered"
+
+require 'securerandom'
 
 class App < Sinatra::Base
+    configure do
+        enable :sessions
+        set :session_secret, ENV.fetch('SESSION_SECRET') {SecureRandom.hex(64)}
+    end
+
+    get '/' do
+        erb :index
+    end
+
+    post '/checkout' do
+        @item = session[:item] = params[:item]
+        
+        erb :checkout
+    end
+
 end
