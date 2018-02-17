@@ -9,14 +9,12 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    binding.pry
-    @session = session
     erb :index
   end
 
   post '/checkout' do
-    @item = params[:item]
 
-binding.pry
+    session[:item] = params[:item]
   end
+
 end
