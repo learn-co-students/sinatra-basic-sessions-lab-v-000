@@ -12,7 +12,6 @@ class App < Sinatra::Base
   end
   
   post '/checkout' do
-      require 'pry'; binding.pry
       session[:item] = params[:item]
       @session = session
       erb :item
