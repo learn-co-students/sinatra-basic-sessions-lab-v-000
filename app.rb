@@ -12,6 +12,5 @@ class App < Sinatra::Base
 
 	post "/checkout" do
 		session[:item] = params[:item]
-		#how the hell do I add :item to the :sessions hash?
 	end
 end
