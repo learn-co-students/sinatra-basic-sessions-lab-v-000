@@ -1,12 +1,11 @@
 require_relative 'config/environment'
-require 'pry'
-
-configure do
-  enable :sessions
-  set :session_secret, "secret"
-end 
 
 class App < Sinatra::Base
+  
+  configure do
+    enable :sessions
+    set :session_secret, "secret"
+  end 
   
   get '/' do 
     erb :index 
@@ -18,5 +17,4 @@ class App < Sinatra::Base
     
     erb :checkout 
   end 
-  
 end
