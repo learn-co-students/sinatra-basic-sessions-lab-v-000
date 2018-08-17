@@ -17,5 +17,4 @@ class App < Sinatra::Base
     erb :show
   end
 
-
 end
