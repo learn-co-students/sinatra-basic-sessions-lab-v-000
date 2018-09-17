@@ -1,1 +1,7 @@
+<form accept-charset="UTF-8" action="/checkout" method="post">
 
+<%= form_purchase do %>
+
+Item to purchase:<input type="text" name="item" value="<%= @purchase %>"
+
+<% end %>
