@@ -4,6 +4,7 @@ require 'rack/test'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/rspec'
+require_relative '../config/environment.rb'
 
 
 RSpec.configure do |config|
