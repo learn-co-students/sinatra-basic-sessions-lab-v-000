@@ -1,30 +1,21 @@
 require_relative 'config/environment'
 
-configure do
-  enable :sessions
-  set :session_secret, "tiddlywinks"
-end
-
 class App < Sinatra::Base
-end
 
-
-  get '/'
-    erb :index
+  configure do
+    enable :sessions
+    set :session_secret, "tiddlywinks"
   end
 
 
-  post '/checkout' do
-    @session = session
-    @session = {
-      "session_id" =>
+  get '/' do
+    erb :index
+  end
 
-# key = item
-# value = item user entered to the purchase
-# store session hash in instance variable that can be accessed in views
-#
-    }
-    erb :'index/checkout'
+  post '/checkout' do
+    session[:item] = params[:item]
+    @session = session
+      erb :checkout
   end
 
 end
