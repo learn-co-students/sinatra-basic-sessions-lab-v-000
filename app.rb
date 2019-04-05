@@ -12,8 +12,9 @@ class App < Sinatra::Base
      end
 
      post '/checkout' do
-       
+
        session[:item]= params[:item]  #guardo el item en el hash session.
        @session = session #guardo el hash en una instancia
+       erb :checkout  #esta pagina no esta armada
      end
 end
