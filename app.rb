@@ -5,7 +5,10 @@ class App < Sinatra::Base
   get '/' do 
   erb  :index
   end 
-  
+ 
+  post '/checkout' do
+    "socks i bought!"
+  end
   
   
 end
